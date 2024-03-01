@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Unicons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="nav_logo">e-commerce</a>
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="#" class="nav_link">Acerca de </a>
+            <a href="#" class="nav_link">Contacto</a>
+          </li>
+        </ul>
+        <div class="buttons">
+          <button class="button" id="login-open">Iniciar sesión</button>
+          <!-- <button class="button" id="register-open">Registrarse</button> -->
+        </div>
+      </nav>
+    </header>
+    <!-- Home -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Iniciar sesión</h2>
+            <div class="input_box">
+              <input
+                id="user-email-login"
+                type="email"
+                placeholder="Usuario o correo electrónico"
+                required
+              />
+              <i class="uil uil-envelope-alt email"></i>
+              <div class="error-message" id="error-email1-message">El correo electrónico no es válido.</div>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Contraseña" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Recuerdame</label>
+              </span>
+              <a href="#" class="forgot_pw">¿Olvidaste tu contraseña?</a>
+            </div>
+            <button id="btn-login" class="button">Iniciar sesión</button>
+            <div class="login_signup">
+              ¿No tienes una cuenta? <a href="#" id="signup">Registrarme</a>
+            </div>
+          </form>
+        </div>
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Registrarse</h2>
+            <div class="frm-overflow-content">
+              <!-- email -->
+              <div class="input_box">
+                <input
+                  id="user-email"
+                  type="email"
+                  placeholder="Correo electrónico"
+                  required
+                />
+                <i class="uil uil-envelope-alt email"></i>
+                <div class="error-message" id="error-email2-message">El correo electrónico no es válido.</div>
+              </div>
+              <div class="input_box">
+                <input
+                  id="user-name"
+                  type="text"
+                  placeholder="Nombre de Usuario"
+                  required
+                />
+                <i class="uil uil-user usr"></i>
+                <div class="error-message" id="username-min-alert">El nombre de usuario debe tener mínimo 3 carácteres</div>
+                <div class="error-message" id="username-max-alert">El nombre de usuario debe tener máximo 12 carácteres</div>
+              </div>
+              <div class="input_box">
+                <input
+                  id="pass1"
+                  type="password"
+                  placeholder="Crea una contraseña"
+                  required
+                />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+                <div class="error-message" id="error-pass-message">Las contraseña es inválida.</div>
+              </div>
+              <div class="input_box">
+                <div class="required-container">
+                  <div class="required-content">
+                    <ul>
+                      <li>Mínimo 8 carácteres</li>
+                      <li>Mínimo 1 letra mayúscula</li>
+                      <li>Mínimo 1 letra minúscula</li>
+                      <li>Mínimo 1 número</li>
+                      <li>
+                        Mínimo 1 carácter especial
+                        <span"
+                          >(¡”#$%&amp;/=’?¡¿:;,.-_+*{][})</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="input_box">
+                <input
+                  id="pass2"
+                  type="password"
+                  placeholder="Confirma la contraseña"
+                  required
+                />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+                <div class="error-message" id="error-message">Las contraseñas no coinciden.</div>
+              </div>
+              <div class="input_box">
+                <input
+                  id="full-name"
+                  type="text"
+                  placeholder="Nombre completo"
+                  required
+                />
+                <i class="uil uil-user usr"></i>
+              </div>
+              <div class="input_box">
+                <input
+                  name=""
+                  id="birthday-date"
+                  type="text"
+                  placeholder="Fecha de nacimiento"
+                  required
+                />
+                <i class="uil uil-calendar-alt date"></i>
+              </div>
+              <div class="input_box">
+                <label class="toggle-switch">
+                  <i class="uil uil-lock-access rol"></i>
+                  <div class="toggle-content">
+                    <span class="lbl">Perfil privado</span>
+                    <input type="checkbox" />
+                    <div class="toggle-switch-background">
+                      <div class="toggle-switch-handle"></div>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="input_box">
+                <div class="radio-container">
+                  <label class="gender-lbl" for="">Selecciona tu sexo</label>
+                  <div class="radio-content">
+                    <div class="radio-wrapper">
+                      <label class="radio-button">
+                        <input required id="option1" name="radio-group" type="radio" />
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Masculino</span>
+                      </label>
+                    </div>
+                    <div class="radio-wrapper">
+                      <label class="radio-button">
+                        <input required id="option2" name="radio-group" type="radio" />
+                        <span class="radio-checkmark"></span>
+                        <span class="radio-label">Femenino</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="btn-register" class="button">Registrarse</button>
+            <div class="login_signup">
+              ¿Ya tienes una cuenta? <a href="#" id="login">Iniciar sesión</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section></section>
+    <script src="../controllers/index.js"></script>
+    <script src="../controllers/datePicker.js"></script>
+    <script src="../controllers/frmValidate.js"></script>
+    <script src="../controllers/passwordValidate.js"></script>
+  </body>
+</html>
